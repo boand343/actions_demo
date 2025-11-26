@@ -207,7 +207,10 @@ class Library:
                 print(f"  - {book}")
 
     def show_available_books(self):
-        available_books=[book for book in self.__books if book.is_available()]
+        available_books = [
+            book for book in self.__books 
+            if book.is_available()
+        ]
         if not available_books:
             print("Нет доступных книг")
         else:
@@ -270,7 +273,10 @@ if __name__ == '__main__':
     # --- создаём книги ---
     b1 = PrintedBook("Война и мир", "Толстой", 1869, 1225, "хорошая")
     b2 = EBook("Мастер и Маргарита", "Булгаков", 1966, 5, "epub")
-    b3=PrintedBook("Преступление и наказание","Достоевский",1866,480,"плохая")
+    b3 = PrintedBook(
+    "Преступление и наказание", "Достоевский",
+    1866, 480, "плохая"
+)
 
     # --- создаём пользователей ---
     user1 = User("Анна")
