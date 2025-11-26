@@ -43,7 +43,8 @@ class PrintedBook(Book):
             print("Книга в новом состоянии")
 
     def __str__(self):
-        return f"{super().__str__()}, {self.pages} страниц, состояние книги: {self.condition}"
+        return f"{super().__str__()}, \
+            {self.pages} страниц, состояние книги: {self.condition}"
 
 
 class EBook(Book):
@@ -122,7 +123,6 @@ class Library:
         for b in self.__borrowed_books:
             print('-', b)
 
-
     def show_available_books(self):
         for b in self.__books:
             if b.is_available():
@@ -146,12 +146,14 @@ class Library:
         else:
             print("Ошибка возврата книги.")
 
+
 if __name__ == '__main__':
     lib = Library()
 
     # --- создаём книги ---
     b1 = PrintedBook("Война и мир", "Толстой", 1869, 1225, "хорошая")
-    b2 = EBook("Мастер и Маргарита", "Булгаков", 1966, 5, "epub")
+    b2 = EBook("Мастер и Маргарита", \
+                "Булгаков", 1966, 5, "epub")
     b3 = PrintedBook("Преступление и наказание", "Достоевский", 1866, 480, "плохая")
 
     # --- создаём пользователей ---
