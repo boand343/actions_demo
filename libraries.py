@@ -75,7 +75,6 @@ class User:
                 print(f"  - {book.get_title()} ({book.get_author()})")
         else:
             print(f"\n{self.name} пока не взял(а) никаких книг")
-
     def get_borrowed_books(self):
         return self.__borrowed_books.copy()
 
