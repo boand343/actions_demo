@@ -29,6 +29,8 @@ class Book:
         status = "доступна" if self.__available else "недоступна"
         return f"{self.__title} ({self.__author}, {self.__year}) - {status}"
 
+
+#внесла изменения
 class PrintedBook(Book):
     def __init__(self, title, author, year, pages, condition):
         super().__init__(title, author, year)
