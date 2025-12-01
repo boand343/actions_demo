@@ -47,7 +47,6 @@ class EBook(Book):
     def __str__(self):
         return super().__str__() + f" {self.file_size} МБ. Формат: {self.format}"
 
-
 class User:
     def __init__(self, name):
         self.name = name
