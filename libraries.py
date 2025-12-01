@@ -34,7 +34,7 @@ class PrintedBook(Book):
             print(f"Книга '{self.get_title()}' приведена в отличное состояние. Cостояние: {self.condition}")
         else:
             print(f"Книга '{self.get_title()}' новая")
-        def __str__(self):
+    def __str__(self):
             return super().__str__() + f" {self.pages} страниц. Состояние: {self.condition}"
 
 class EBook(Book):
