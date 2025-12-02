@@ -1,7 +1,10 @@
+import sys
+import os
+
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+
 import unittest
 from src.main import add, subtract
-
-
 class TestMathFunctions(unittest.TestCase):
 
     def test_add(self):
