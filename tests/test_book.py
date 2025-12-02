@@ -1,10 +1,9 @@
-from src.taskClass import Book
-
-
 import sys
 import os
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__),
                                                 '..')))
+from src.taskClass import Book
+
 
 def test_book_creation():
     book = Book("Title", "Author", 2000, available=True)
