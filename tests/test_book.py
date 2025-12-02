@@ -1,10 +1,8 @@
-#!/usr/bin/env python3
 import os
 import sys
-from src.taskClass import Book
-
-
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..'))
+
+from src.taskClass import Book
 
 
 def test_book_creation():

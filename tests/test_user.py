@@ -1,9 +1,8 @@
 import os
 import sys
-from src.taskClass import User, Book
-
-
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..'))
+
+from src.taskClass import User, Book
 
 
 def test_user_borrow_and_return():
