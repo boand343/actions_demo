@@ -1,12 +1,14 @@
+from src.taskClass import Library, Book, User
+
+
 import sys
 import os
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
-from src.taskClass import Library, Book, User
 
 
 def test_library_add_and_find_book():
     lib = Library()
-    b = Book("Title", "Author", 2000)
+    b = Book("Title", "Author", 2000, available=True)
     lib.add_book(b)
     assert lib.find_book("Title") == b
 
@@ -21,7 +23,7 @@ def test_library_add_user_and_find():
 def test_lend_and_return():
     lib = Library()
     u = User("Анна")
-    b = Book("Title", "A", 2000)
+    b = Book("Title", "A", 2000, available=True)
     lib.add_user(u)
     lib.add_book(b)
     assert lib.lend_book("Title", "Анна") is True

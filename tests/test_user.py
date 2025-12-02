@@ -1,12 +1,14 @@
+from src.taskClass import User, Book
+
+
 import sys
 import os
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
-from src.taskClass import User, Book
 
 
 def test_user_borrow_and_return():
     user = User("Анна")
-    book = Book("Title", "Author", 2000)
+    book = Book("Title", "Author", 2000, available=True)
     assert user.borrow(book) is True
     assert book.get_available() is False
     assert len(user.get_borrowed_books()) == 1
