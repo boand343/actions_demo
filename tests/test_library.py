@@ -1,8 +1,9 @@
 import os
 import sys
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..'))
-
 from src.taskClass import Library, Book, User
+
+
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..'))
 
 
 def test_library_add_and_find_book():
