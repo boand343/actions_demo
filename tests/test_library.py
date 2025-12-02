@@ -1,16 +1,19 @@
 from src.taskClass import Library, Book, User
 
+
 def test_library_add_and_find_book():
     lib = Library()
     b = Book("Title", "Author", 2000)
     lib.add_book(b)
     assert lib.find_book("Title") == b
 
+
 def test_library_add_user_and_find():
     lib = Library()
     u = User("Анна")
     lib.add_user(u)
     assert lib.find_user("Анна") == u
+
 
 def test_lend_and_return():
     lib = Library()
