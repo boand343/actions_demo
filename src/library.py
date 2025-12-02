@@ -25,7 +25,8 @@ class Book:
 
     def __str__(self):
         status = "доступна" if self.__available else "недоступна"
-        return f"'{self.__title}' - '{self.__author}' ({self.__year}), [{status}]"
+        return (f"'{self.__title}' - '{self.__author}' "
+                f"({self.__year}), [{status}]")
 
 
 class PrintedBook(Book):
@@ -37,12 +38,14 @@ class PrintedBook(Book):
     def repair(self):
         if self.condition == "плохая":
             self.condition = "хорошая"
-            print(f"Книга '{self.get_title()}' отремонтирована. "
-                  f"Состояние: {self.condition}")
+            msg = (f"Книга '{self.get_title()}' отремонтирована. "
+                   f"Состояние: {self.condition}")
+            print(msg)
         elif self.condition == "хорошая":
             self.condition = "новая"
-            print(f"Книга '{self.get_title()}' приведена в отличное состояние. "
-                  f"Состояние: {self.condition}")
+            msg = (f"Книга '{self.get_title()}' приведена в "
+                   f"отличное состояние. Состояние: {self.condition}")
+            print(msg)
         else:
             print(f"Книга '{self.get_title()}' новая")
 
@@ -58,8 +61,9 @@ class EBook(Book):
         self.format = format
 
     def download(self):
-        print(f"Книга '{self.get_title()}' загружается... "
-              f"[{self.file_size} МБ, формат {self.format}]")
+        msg = (f"Книга '{self.get_title()}' загружается... "
+               f"[{self.file_size} МБ, формат {self.format}]")
+        print(msg)
 
     def __str__(self):
         return (super().__str__() +
@@ -77,7 +81,8 @@ class User:
             book.mark_as_taken()
             print(f"{self.name} взял(а) книгу '{book.get_title()}'")
         else:
-            print(f"Книга '{book.get_title()}' недоступна для {self.name}")
+            msg = f"Книга '{book.get_title()}' недоступна для {self.name}"
+            print(msg)
 
     def return_book(self, book):
         if book in self.__borrowed_books:
@@ -105,8 +110,9 @@ class Librarian(User):
 
     def add_book(self, library, book):
         library.add_book(book)
-        print(f"Библиотекарь {self.name} добавил(а) книгу "
-              f"'{book.get_title()}'")
+        msg = (f"Библиотекарь {self.name} добавил(а) книгу "
+               f"'{book.get_title()}'")
+        print(msg)
 
     def remove_book(self, library, title):
         library.remove_book(title)
@@ -114,8 +120,9 @@ class Librarian(User):
 
     def register_user(self, library, user):
         library.add_user(user)
-        print(f"Библиотекарь {self.name} зарегистрировал(а) "
-              f"пользователя {user.name}")
+        msg = (f"Библиотекарь {self.name} зарегистрировал(а) "
+               f"пользователя {user.name}")
+        print(msg)
 
 
 class Library:
@@ -158,7 +165,8 @@ class Library:
             print("\nБиблиотека пуста")
 
     def show_available_books(self):
-        available = [book for book in self.__books if book.is_available()]
+        available = [book for book in self.__books
+                     if book.is_available()]
         if available:
             print("\nДОСТУПНЫЕ КНИГИ:")
             for book in available:
