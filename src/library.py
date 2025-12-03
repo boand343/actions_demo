@@ -1,5 +1,6 @@
 import json
 
+
 class Book:
     def __init__(self, title, author, year):
         self.__title = title
@@ -29,6 +30,7 @@ class Book:
         status = "доступна" if self.__available else "недоступна"
         return f"{self.__title} ({self.__author}, {self.__year}) - {status}"
 
+
 class PrintedBook(Book):
     def __init__(self, title, author, year, pages, condition):
         super().__init__(title, author, year)
@@ -40,10 +42,16 @@ class PrintedBook(Book):
             self.condition = "хорошая"
         elif self.condition == "хорошая":
             self.condition = "новая"
-        print(f"Состояние книги '{self.get_title()}' теперь: {self.condition}")
+        print(
+            f"Состояние книги '{self.get_title()}' теперь: {self.condition}"
+        )
 
     def __str__(self):
-        return f"{super().__str__()} - {self.pages} стр., состояние: {self.condition}"
+        return (
+            f"{super().__str__()} - {self.pages} стр., "
+            f"состояние: {self.condition}"
+        )
+
 
 class EBook(Book):
     def __init__(self, title, author, year, file_size, file_format):
@@ -55,15 +63,20 @@ class EBook(Book):
         print(f"Книга '{self.get_title()}' загружается...")
 
     def __str__(self):
-        return f"{super().__str__()} - {self.file_size} МБ, формат: {self.format}"
+        return (
+            f"{super().__str__()} - {self.file_size} МБ, "
+            f"формат: {self.format}"
+        )
+
 
 class AudioBook(Book):
     def __init__(self, title, author, year, duration):
         super().__init__(title, author, year)
-        self.duration = duration 
+        self.duration = duration
 
     def __str__(self):
         return f"{super().__str__()} - аудио {self.duration} мин"
+
 
 class User:
     def __init__(self, name):
@@ -101,6 +114,7 @@ class User:
     def get_borrowed_books(self):
         return list(self.__borrowed_books)
 
+
 class Librarian(User):
     def add_book(self, library, book):
         library.add_book(book)
@@ -112,6 +126,7 @@ class Librarian(User):
     def register_user(self, library, user):
         library.add_user(user)
         print(f"Пользователь '{user.name}' зарегистрирован")
+
 
 class Library:
     def __init__(self):
@@ -170,7 +185,6 @@ class Library:
     def lend_book(self, title, user_name):
         user = self.find_user(user_name)
         book = self.find_book(title)
-
         if user and book:
             user.borrow(book)
         else:
@@ -179,7 +193,6 @@ class Library:
     def return_book(self, title, user_name):
         user = self.find_user(user_name)
         book = self.find_book(title)
-
         if user and book:
             user.return_book(book)
         else:
@@ -188,7 +201,7 @@ class Library:
     def save_to_json(self, filename):
         data = {
             "books": [b.get_title() for b in self.__books],
-            "users": [u.name for u in self.__users]
+            "users": [u.name for u in self.__users],
         }
         with open(filename, "w", encoding="utf-8") as f:
             json.dump(data, f, ensure_ascii=False, indent=2)
@@ -199,7 +212,8 @@ class Library:
             data = json.load(f)
         print("Данные загружены:", data)
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     lib = Library()
 
     b1 = PrintedBook("Война и мир", "Толстой", 1869, 1225, "хорошая")
