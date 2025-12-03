@@ -43,7 +43,8 @@ class PrintedBook(Book):
         elif self.condition == "хорошая":
             self.condition = "новая"
         print(
-            f"Состояние книги '{self.get_title()}' теперь: {self.condition}"
+            f"Состояние книги '{self.get_title()}' теперь: "
+            f"{self.condition}"
         )
 
     def __str__(self):
@@ -218,7 +219,9 @@ if __name__ == "__main__":
 
     b1 = PrintedBook("Война и мир", "Толстой", 1869, 1225, "хорошая")
     b2 = EBook("Мастер и Маргарита", "Булгаков", 1966, 5, "epub")
-    b3 = PrintedBook("Преступление и наказание", "Достоевский", 1866, 480, "плохая")
+    b3 = PrintedBook(
+        "Преступление и наказание", "Достоевский", 1866, 480, "плохая"
+    )
 
     user1 = User("Анна")
     librarian = Librarian("Мария")
