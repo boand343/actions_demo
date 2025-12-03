@@ -1,5 +1,6 @@
 from src.library import Library, PrintedBook
 
+
 def test_add_book():
     lib = Library()
     book = PrintedBook("Test Book", "Author", 2020, 100, "хорошая")
