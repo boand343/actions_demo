@@ -57,8 +57,6 @@ class EBook(Book):
     def __str__(self):
         return f"{super().__str__()} - {self.file_size} МБ, формат: {self.format}"
 
-
-#вношу изменения
 class AudioBook(Book):
     def __init__(self, title, author, year, duration):
         super().__init__(title, author, year)
