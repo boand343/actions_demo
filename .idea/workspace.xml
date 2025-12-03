@@ -38,18 +38,18 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "Morr66"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Morr66&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/Morr66/actions_demo",
-    "accountId": "b9dc0639-e339-4fff-9449-40c6103a613b"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Morr66/actions_demo&quot;,
+    &quot;accountId&quot;: &quot;b9dc0639-e339-4fff-9449-40c6103a613b&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 5
 }</component>
@@ -58,25 +58,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "Python tests.Python tests for test_library.TestLibrarian.test_librarian_creation.executor": "Run",
-    "Python tests.Python tests for test_library.TestLibrary.test_add_and_find_book.executor": "Run",
-    "Python tests.Python tests for test_library.TestLibrary.test_add_book.executor": "Run",
-    "Python tests.Python tests for test_library.TestLibrary.test_create_library.executor": "Run",
-    "Python tests.Python tests for test_library.TestLibrary.test_find_book.executor": "Run",
-    "Python tests.Python tests for test_library.TestLibrary.test_remove_book.executor": "Run",
-    "Python tests.Python tests for test_library.TestPrintedBook.test_printed_book_repair.executor": "Run",
-    "Python tests.Python tests in test_library.py.executor": "Run",
-    "Python.library.executor": "Run",
-    "Python.test_library.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "last_opened_file_path": "/Users/morr66/Documents/Python/actions_demo/src"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Python tests.Python tests for test_library.TestLibrarian.test_librarian_creation.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_library.TestLibrary.test_add_and_find_book.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_library.TestLibrary.test_add_book.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_library.TestLibrary.test_create_library.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_library.TestLibrary.test_find_book.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_library.TestLibrary.test_remove_book.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_library.TestPrintedBook.test_printed_book_repair.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests in test_library.py.executor&quot;: &quot;Run&quot;,
+    &quot;Python.library.executor&quot;: &quot;Run&quot;,
+    &quot;Python.test_library.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/morr66/Documents/Python/actions_demo/src&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src" />
